@@ -3,14 +3,26 @@
 
 <head>
   <title>test</title>
-  <script>
 
-    setTimeout(() => document.getElementById('test').innerHTML = 'yooooo', 2000)
-  </script>
+  <style>
+    body {
+      background: #333;
+      color: #eee;
+    }
+  </style>
 </head>
 
 <body>
   <div id="test">Hello</div>
+  <script>
+    let d = new Date();
+
+    setInterval(() => {
+      let text = document.createTextNode(`yoo alex ${d.getSeconds()}`);
+      let ele = document.createElement('p').appendChild(text);
+      document.querySelector('#test').appendChild(ele)
+    }, 1000);
+  </script>
 </body>
 
 </html>
