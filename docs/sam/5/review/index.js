@@ -1,33 +1,29 @@
 /*
   create an array of posts, posts need to have at least 3 fields on them
 */
-
 let posts = [
   {
-    title: 'Sam',
-    isSexy: true,
-    isSexier: false,
-    description: 'noob',
+    title: 'car',
+    tires: 'four',
+    fuel: 'gasoline',
+    color: 'blue',
   },
   {
-    title: 'Alex',
-    isSexy: false,
-    isSexier: true,
-    description: 'sorta noob',
+    title: 'house',
+    color: 'brown',
+    windows: 'a ton',
+    doors: '3',
   },
   {
-    title: 'Me',
-    isSexy: true,
-    isSexier: true,
-    isSexierist: true,
-    description: 'ultra noob',
+    title: 'table',
+    material: 'wood',
+    chairs: 'six',
+    color: 'brown',
   },
 ];
-
 /*
  loop through the array, and console.log a field (key) on it each time
 */
-
 //posts.forEach(post => console.log(post.title));
 
 /*
@@ -36,12 +32,9 @@ let posts = [
 
 let numbers = [1, 2, 3, 4];
 
-let reducer = (accumulator, value) => {
-  accumulator = accumulator + value;
-
-  return accumulator;
+let reducer = (acc, value) => {
+  acc = acc + value;
+  return acc;
 };
-
 let result = numbers.reduce(reducer, 0);
-
 console.log(result);
